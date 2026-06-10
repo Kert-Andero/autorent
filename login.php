@@ -15,6 +15,7 @@ session_start();
     <!-- <?php
 echo password_hash("admin1", PASSWORD_DEFAULT);
 ?> 
+<!-- hashi lõpp -->
 
 <?php include('config.php'); ?>
 <?php
