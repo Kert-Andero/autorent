@@ -102,7 +102,7 @@ $rida = mysqli_fetch_row($valjund);
           <ul class="list-unstyled mb-4">
             <li><strong>Mootor: </strong><?php echo $rida[3]?></li>
             <li><strong>Kütus: </strong><?php echo $rida[4]?></li>
-            <li><strong>Käigukast: </strong><?php echo $rida[11]?></li>
+            <li><strong>Käigukast: </strong><?php echo $rida[5]?></li>
             <li><strong>Kohad: </strong><?php echo $rida[10]?></li>
             <li><strong>Staatus: </strong><?php echo $rida[8]?></li>
           </ul>
@@ -163,6 +163,5 @@ $rida = mysqli_fetch_row($valjund);
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-
 </body>
 </html>

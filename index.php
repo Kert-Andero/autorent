@@ -22,7 +22,7 @@
 </head>
 <body>
     <!-- menüü -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
+<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
   <div class="container">
     <a class="navbar-brand fw-bold" href="#">Autorent</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,20 +36,34 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Autod</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Hinnad</a>
+         <li class="nav-item">
+          <a class="nav-link active" aria-disabled="true">Hinnad</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="adminlogin.php">login</a>
+        </li>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Kontakt</a>
+          <a class="nav-link active" aria-disabled="true">Kontakt</a>
+        </li>
+          <li class="nav-item">
+        <a class="nav-link"href="registreerimine.php">Registreerimine</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Otsi" aria-label="Search" name="search"/>
-        <button class="btn btn-outline-secondary" type="submit"><i class="bi bi-search"></i></button>
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name = "search"/>
+        <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
       </form>
-      <button class="btn btn-success ms-5" onclick="window.location.href='login.php'">Login</button>
-      <button class="btn btn-success ms-1" onclick="window.location.href='logout.php'">Log out</button>
-      <button class="btn btn-primary ms-1" onclick="window.location.href='registreerimine.php'">Registreeri</button>
+      <form action="adminlogout.php">
+<div class="d-grid gap-2  d-md-flex justify-content-md-end">
+  <button class="btn btn-outline-secondary me-md-2" type="submit"></a>Logout</button>
+</div>
     </div>
   </div>
 </nav>
@@ -60,7 +74,7 @@
       <div class="hero bg-body-tertiary p-4">
         <div class="row h-100">
             <div class="col-sm-6">
-                <h1>Rendi<br>auto<br>soodsalt</h1>
+                <h1>Rendi auto<br>soodsalt</h1>
                 <p class="text-secondary">Lai valik autosid igaks olukorraks</p>
                 <button class="btn btn-dark">Vaata autosid</button>
             </div>
@@ -116,7 +130,7 @@ while($rida = mysqli_fetch_row($valjund)){
           Mootor: <?php echo $rida[3]; ?><br>
           Kütus: <?php echo $rida[4]; ?><br>
           Hind: <?php echo $rida[5]; ?>€/päev</p>
-          <a href="car.php?car_id=<?php echo $rida[0] ?>" class="btn btn-dark w-100">Rendi</a>
+          <a href="single_car.php?car_id=<?php echo $rida[0] ?>" class="btn btn-dark w-100">Rendi</a>
         </div>
       </div>
     </div>
